@@ -76,7 +76,7 @@ export class PropertyService {
 
 
     updateRecord(property){
-        console.log('Updating Record',property);
+        console.log('Updating s Record',property);
         var headers = new Headers();
         headers.append('Content-Type', 'application/json');
         console.log('Updating updateRecord -> ',headers);
