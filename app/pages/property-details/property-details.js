@@ -41,6 +41,13 @@ export class PropertyDetailsPage {
         this.property.likes++;
     }
 
+
+    updateRecord(properties){
+        console.log('property record',properties);
+        this.propertyService.updateRecord(properties);
+        console.log('property record');
+    }
+
     share(event, property) {
         let actionSheet = ActionSheet.create({
             buttons: [

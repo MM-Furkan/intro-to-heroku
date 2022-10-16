@@ -76,7 +76,7 @@ export class PropertyService {
 
 
     updateRecord(property){
-        console.log('Updating Record',event);
+        console.log('Updating Record',property);
         var headers = new Headers();
         headers.append('Content-Type', 'application/json');
         return this.http.post('/makeOffer', JSON.stringify({ 'property__c': property.id, 'Client_Offer__c' : 2345 }), {headers: headers});
