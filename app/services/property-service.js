@@ -80,7 +80,7 @@ export class PropertyService {
         var headers = new Headers();
         headers.append('Content-Type', 'application/json');
         console.log('Updating updateRecord -> ',headers);
-        this.http.post('/makeOffer', JSON.stringify({ 'property__c': property.id, 'Client_Offer__c' : 2345 }), {headers: headers}).then((res => {
+        this.http.post('/makeOffer', JSON.stringify({ 'property__c': property.id, 'Client_Offer__c' : 2345 }), {headers: headers}).subscribe((res => {
             console.log('Logger hehe',res);
         })).catch((err) => {
             console.log('error', err);
