@@ -91,7 +91,7 @@ app.get('/broker/:sfid', function(req, res) {
 app.post('/makeOffer',(req,res) => {
   console.log('req body', req.body);
   console.log('req param', req.param);
-  client.query('UPDATE '+propertyTable+ 'SET Client_Offer__c = '+req.body.Client_Offer__c+'WHERE sfid = '+req.body.property__c+'');
+  client.query('UPDATE '+propertyTable+ ' SET Client_Offer__c = '+req.body.Client_Offer__c+' WHERE sfid = '+req.body.property__c+'');
   console.log('make');
   res.json(data);
 })
